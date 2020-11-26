@@ -1,0 +1,17 @@
+plugins {
+    id "application"
+    id "java"
+}
+
+group 'no.nav.bedpress'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "no.nav.bedpress.Main"
+sourceCompatibility = 15
+
+apply from: "dependencies.gradle"
+apply from: "test.gradle"

@@ -1,0 +1,18 @@
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
+}
+
+test {
+    useJUnitPlatform()
+
+    systemProperties = [
+            'junit.jupiter.extensions.autodetection.enabled': 'true',
+            'junit.jupiter.testinstance.lifecycle.default': 'per_class'
+    ]
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+
+    failFast = true
+}
